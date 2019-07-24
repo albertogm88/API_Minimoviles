@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "abec4e63-4ced-4361-a03c-d5acefe3dcad",
+		"name": "Minimoviles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocolo}}://{{host}}:{{port}}/articulos/",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"articulos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get media",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocolo}}://{{host}}:{{port}}/media/",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"media",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get media by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocolo}}://{{host}}:{{port}}/media/31",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"media",
+						"31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocolo}}://{{host}}:{{port}}/articulos/288",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"articulos",
+						"288"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Producto by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocolo}}://{{host}}:{{port}}/productos/1",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocolo}}://{{host}}:{{port}}/productos/",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Operadores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocolo}}://{{host}}:{{port}}/operadores/",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"operadores",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
