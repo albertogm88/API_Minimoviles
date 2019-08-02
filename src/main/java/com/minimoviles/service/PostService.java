@@ -19,6 +19,10 @@ public class PostService {
 		return postRepositorio.findAll();
 	}
 	
+	public Iterable<BerryCmsContent> getPostPaginate(int firstResult, int pageSize){
+		return postRepositorio.findAllPaginate(0, 10);
+	}
+	
 	public Optional<BerryCmsContent> getPost(String id){
 		return postRepositorio.findById(id);
 	}

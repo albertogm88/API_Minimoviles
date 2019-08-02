@@ -21,6 +21,11 @@ public class PostRest {
 	
 	@GetMapping(path = "/", produces = "application/json")
 	public @ResponseBody Iterable<BerryCmsContent> getAllPost() {
+		return postService.getPostPaginate(0, 10);
+	}
+	
+	@GetMapping(path = "/paginate", produces = "application/json")
+	public @ResponseBody Iterable<BerryCmsContent> getPostPaginate() {
 		return postService.getAllPost();
 	}
 	

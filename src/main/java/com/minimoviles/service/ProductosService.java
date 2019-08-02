@@ -25,7 +25,7 @@ public class ProductosService {
 	
 	public List<ProductoJTO> getListaProducto(){
 		List<ProductoJTO> listaJTO = new ArrayList<>();
-		Iterable<AppProductsProduct> listaProductos = productosRepositorio.findAll();
+		Iterable<AppProductsProduct> listaProductos = productosRepositorio.findAllPaginate(0, 10);
 		for(AppProductsProduct producto : listaProductos ) {
 			listaJTO.add(getProductoCompleto(producto.getIdProduct()));
 		}

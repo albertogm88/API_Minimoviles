@@ -6,6 +6,7 @@ import java.util.Optional;
 import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 
 import org.springframework.data.repository.CrudRepository;
@@ -96,6 +97,13 @@ public abstract class AbstractRepository<T, ID> implements CrudRepository<T, ID>
 		
 	}
 
-	
+	public Iterable<T> findAllPaginate(int firstResult, int pageSize) {
+		CriteriaQuery<T> cq = em.getCriteriaBuilder().createQuery(entityClass);
+		cq.from(entityClass);
+		TypedQuery<T> typedQuery = em.createQuery(cq);
+		typedQuery.setFirstResult(firstResult);
+		typedQuery.setMaxResults(pageSize);
+		return typedQuery.getResultList();
+	}
 
 }

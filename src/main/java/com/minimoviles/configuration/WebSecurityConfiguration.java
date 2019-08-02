@@ -26,6 +26,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         .antMatchers(HttpMethod.GET,"/tags/").permitAll()
         .antMatchers(HttpMethod.GET,"/media/*").permitAll()
         .antMatchers(HttpMethod.GET,"/productos/*").permitAll()
+        .antMatchers("/h2-console/**")
+        .permitAll()
+        .antMatchers("/v2/api-docs", "/configuration/**", "/swagger*/**", "/webjars/**")
+        .permitAll()
         .anyRequest().authenticated();
     }
     

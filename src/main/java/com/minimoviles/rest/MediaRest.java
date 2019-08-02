@@ -12,14 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.minimoviles.entidades.BerryMedia;
 import com.minimoviles.repositorio.MediaRepositorio;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping(path = "/media")
+@Api(value = "Media", description = "API CRUD para gestionar los archivos multimedia")
 public class MediaRest {
 	
 	@Autowired
 	private MediaRepositorio mediaRepositorio;
 	
 	@GetMapping(path = "/", produces = "application/json")
+	@ApiOperation(value = "Devuelve toda la lista de archivos multimedias")
 	public @ResponseBody Iterable<BerryMedia> getAllMedias(){
 		
 		return mediaRepositorio.findAll();

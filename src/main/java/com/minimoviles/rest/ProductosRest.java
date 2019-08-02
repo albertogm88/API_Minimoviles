@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.minimoviles.jto.ProductoJTO;
 import com.minimoviles.service.ProductosService;
 
+import io.swagger.annotations.Api;
+
 @RestController
 @RequestMapping(path = "/productos")
+@Api(value = "Productos", description = "API CRUD para productos")
 public class ProductosRest {
 
 	
