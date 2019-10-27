@@ -31,7 +31,6 @@ public class PostRest {
 	
 	@GetMapping(path = "/{id}", produces = "application/json")
  	public @ResponseBody Optional<BerryCmsContent> getPost(@PathVariable("id") String id) {
-		
 		return postService.getPost(id);
 	}
 

@@ -1,14 +1,14 @@
 package com.minimoviles.rest.configuracion;
 
-import com.minimoviles.entidades.BerryAppMenuItem;
-import com.minimoviles.service.MenuService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.minimoviles.entidades.BerryAppMenuItem;
+import com.minimoviles.repositorio.MenuRepositorio;
 
 import io.swagger.annotations.Api;
 
@@ -19,7 +19,7 @@ import io.swagger.annotations.Api;
 public class MenuRest {
 	
 	@Autowired
-	private MenuService menuService;
+	private MenuRepositorio menuService;
 	
 	
 	@GetMapping(path = "/", produces = "application/json")

@@ -20,7 +20,7 @@ public class PostService {
 	}
 	
 	public Iterable<BerryCmsContent> getPostPaginate(int firstResult, int pageSize){
-		return postRepositorio.findAllPaginate(0, 10);
+		return postRepositorio.findAllPaginate(firstResult, pageSize);
 	}
 	
 	public Optional<BerryCmsContent> getPost(String id){
